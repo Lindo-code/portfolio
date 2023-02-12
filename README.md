@@ -10,7 +10,7 @@
 
 ## Link
 
-- [Portfolio Website](https://lindo-code.tk/ "View Website")
+- [Portfolio Website](https://lindo-code.github.io/portfolio/ "View Website")
 
 ## Built With
 
