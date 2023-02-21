@@ -254,7 +254,9 @@ nav {
   box-shadow: 0 18px 20px 0 rgba(0,0,0,0.6);
   background-color: #2f4f4f;
 }
-
+card-link-color {
+  color: red;
+}
 /*| CURRENT & COMPLETED PROJECTS|*/
 .projects-container {
   background-color: #ffdead;
