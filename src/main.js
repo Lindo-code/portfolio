@@ -21,8 +21,8 @@ function copyright() {
     query.year.innerText = str;
 };
     
-function delay(url) {
-    setTimeout(function() {
-        window.open(url, "_blank") = url;
-    }, 1000);
-};
+// function delay(url) {
+//     setTimeout(function() {
+//         window.open(url, "_blank") = url;
+//     }, 1000);
+// };
