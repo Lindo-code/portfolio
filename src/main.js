@@ -1,4 +1,4 @@
-const { copyright, scrollFunction } = require("./utils/my-functions");
+const { copyright, scrollFunction, addAddress } = require("./utils/my-functions");
 
 window.onscroll = function () {
   scrollFunction();
@@ -6,6 +6,7 @@ window.onscroll = function () {
 
 window.onload = function () {
   copyright();
+  addAddress();
 };
 
 form.addEventListener("submit", handleSubmit);
