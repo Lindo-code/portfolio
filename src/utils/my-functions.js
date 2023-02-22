@@ -30,6 +30,10 @@ const populateCards = () => {
   queries.cards.innerHTML = cards;
 };
 
+const addAddress = () => {
+  queries.address.innerText = str.address;
+}
+
 const scrollFunction = () => {
   (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? query.scrollBtn.style.display = "block" : query.scrollBtn.style.display = "none";
 };
@@ -65,4 +69,4 @@ const handleSubmit = (event) => {
     });
 };
 
-module.exports = { showLinks, populateCards, showBio, handleSubmit, copyright, scrollFunction };
+module.exports = { showLinks, populateCards, showBio, handleSubmit, copyright, scrollFunction, addAddress };

@@ -8,6 +8,7 @@ const queries = {
   form: document.querySelector(".my-form"),
   status: document.querySelector(".my-form-status"),
   year: document.querySelector(".year"),
+  address: document.querySelector(".my-address"),
 };
 
 const str = {
@@ -19,6 +20,7 @@ const str = {
     title: "WHO AM I?",
     text: "I'm an aspiring web-developer and all-round programmer, who's currently learning JavaScript for front-end development and Node.JS for back-end development, with the goal of becoming a full-stack web developer.\n\nAs someone who is highly focused and attentive to detail, I am always keen on giving each project I work on it's own unique design and even though I tend to lean more towards the design aspect of coding I'm able to appreciate the functionality that backend can offer to enhance any project.",
   },
+  address: "10238 Seleteng, Ga-Maleka\nMphahlele\nPolokwane\n0736"
 };
 
 const cardsContent = [
