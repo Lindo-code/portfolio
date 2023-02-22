@@ -5,6 +5,9 @@ const queries = {
   bioTitle: document.querySelector(".bio-title"),
   bio: document.querySelector(".bio"),
   cards: document.querySelector(".cards-container"),
+  form: document.querySelector(".my-form"),
+  status: document.querySelector(".my-form-status"),
+  year: document.querySelector(".year"),
 };
 
 const str = {

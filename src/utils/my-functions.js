@@ -1,4 +1,11 @@
-const {cardsContent, str, queries} = require("../stored-obj-and-arr");
+const { cardsContent, str, queries } = require("../stored-obj-and-arr");
+
+const copyright = () => {
+  const date = new Date();
+  const currYear = date.getFullYear();
+  const str = `${currYear}`;
+  queries.year.innerText = str;
+};
 
 const showLinks = () => {
   for (let i = 0; i < str.nav.length; i++) {
@@ -23,4 +30,39 @@ const populateCards = () => {
   queries.cards.innerHTML = cards;
 };
 
-module.exports = { showLinks, populateCards, showBio };
+const scrollFunction = () => {
+  (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? query.scrollBtn.style.display = "block" : query.scrollBtn.style.display = "none";
+};
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: queries.form.method,
+    body: data,
+    headers: { Accept: "application/json" },
+  })
+    .then((response) => {
+      if (response.ok) {
+        queries.status.innerHTML = "Thanks for your submission!";
+        queries.form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            queries.status.innerHTML = data["errors"]
+              .map((error) => error["message"])
+              .join(", ");
+          } else {
+            queries.status.innerHTML =
+              "Oops! There was a problem submitting your form";
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      queries.status.innerHTML =
+        "Oops! There was a problem submitting your form";
+    });
+};
+
+module.exports = { showLinks, populateCards, showBio, handleSubmit, copyright, scrollFunction };
